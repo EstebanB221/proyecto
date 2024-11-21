@@ -142,7 +142,7 @@ public class escritorio extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, 520));
 
-        jPanel3.setBackground(new java.awt.Color(29, 30, 51));
+        jPanel3.setBackground(new java.awt.Color(255, 0, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
