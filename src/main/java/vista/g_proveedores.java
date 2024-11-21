@@ -1,6 +1,7 @@
 
-package com.mycompany.prototipo;
+package vista;
 
+import vista.escritorio;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
