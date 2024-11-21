@@ -292,7 +292,7 @@ public class clientes extends javax.swing.JFrame {
             }
         });
 
-        jPanel5.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel5.setBackground(new java.awt.Color(255, 0, 102));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Admin");
