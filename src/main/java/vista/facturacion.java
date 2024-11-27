@@ -34,11 +34,6 @@ public class facturacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -53,11 +48,14 @@ public class facturacion extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -65,62 +63,6 @@ public class facturacion extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                { new Integer(1), "23423", "4543534", "1234", "nose", "29000", "hoy", "56463"},
-                { new Integer(2), "32423", "345345345", "2456", "nose", "200000", "mañana", "345435"},
-                { new Integer(3), "56546", "6575698", "7882", "nose", "100000", "hoy", "346547"},
-                { new Integer(4), "43543", "345345345", "3452", "nose", "1200000", "pasado mañana ", "457586"},
-                { new Integer(5), "78978", "456457", "46732", "nose", "2300000", "este lunes", "8709656"}
-            },
-            new String [] {
-                "#", "ID", "Ingreso", "Egreso", "Descripcion", "valor", "fecha", "Total"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, true, true, true, true, true, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-        }
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 740, 540));
-
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 188, 30));
-
-        jButton1.setText("Buscar");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, 30));
-
-        jButton5.setText("Agregar");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 90, -1, 30));
 
         jPanel3.setBackground(new java.awt.Color(29, 30, 51));
 
@@ -293,15 +235,6 @@ public class facturacion extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 660));
 
-        jButton12.setText("Eliminar");
-        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 90, -1, 30));
-
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Admin");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, -1, -1));
@@ -344,6 +277,19 @@ public class facturacion extends javax.swing.JFrame {
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, 180, 70));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Cliente:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 60, 30));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Cliente", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 140, 30));
+
+        jLabel6.setText("Producto");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -355,132 +301,9 @@ public class facturacion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    String searchText = jTextField1.getText().trim().toLowerCase(); // Obtener el texto de búsqueda
-
-    // Obtener el sorter de la tabla
-    TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>((DefaultTableModel) jTable1.getModel());
-    jTable1.setRowSorter(sorter);
-
-    if (searchText.isEmpty()) {
-        // Si el campo de búsqueda está vacío, mostrar todas las filas
-        sorter.setRowFilter(null); // Restablecer el filtro
-        return;
-    }
-
-    // Determinar la longitud del texto de búsqueda
-    if (searchText.length() == 1 && Character.isDigit(searchText.charAt(0))) {
-        // Si es un solo número, buscar por #
-        sorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
-            @Override
-            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
-                String numberCellValue = entry.getStringValue(0).toLowerCase(); // Columna #
-                return numberCellValue.contains(searchText);
-            }
-        });
-    } else if (searchText.length() == 5 && searchText.chars().allMatch(Character::isDigit)) {
-        // Si son 5 números, buscar por ID
-        sorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
-            @Override
-            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
-                String idCellValue = entry.getStringValue(1).toLowerCase(); // Columna ID
-                return idCellValue.contains(searchText);
-            }
-        });
-    } else {
-        // Si no coincide con las condiciones anteriores, buscar en las columnas de material, tipo y estado
-        sorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
-            @Override
-            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
-                String ingreso = entry.getStringValue(2).toLowerCase(); // Columna de material
-                String egreso = entry.getStringValue(3).toLowerCase(); // Columna de tipo
-                String descripcion = entry.getStringValue(4).toLowerCase(); // Columna de estado
-                String fecha = entry.getStringValue(6).toLowerCase(); 
-                String Total = entry.getStringValue(7).toLowerCase();
-                // Verificar si alguno de los valores contiene el texto de búsqueda
-                return ingreso.contains(searchText) || egreso.contains(searchText) || descripcion.contains(searchText)|| fecha.contains(searchText)|| Total.contains(searchText);
-            }
-        });
-    
-
-    }
-
-    // Si no se encontró ninguna coincidencia, puedes mostrar un mensaje o realizar otra acción
-    if (jTable1.getRowCount() == 0) {
-        JOptionPane.showMessageDialog(this, "No se encontraron resultados.");
-    }
-
-
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-    // Obtener el modelo de la tabla
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
-    // Obtener los índices de las filas seleccionadas
-    int[] selectedRows = jTable1.getSelectedRows();
-
-    // Verificar si se ha seleccionado alguna fila
-    if (selectedRows.length > 0) {
-        // Eliminar las filas seleccionadas en orden inverso
-        for (int i = selectedRows.length - 1; i >= 0; i--) {
-            model.removeRow(selectedRows[i]);
-        }
-
-        // Actualizar la numeración de la columna #
-        for (int i = 0; i < model.getRowCount(); i++) {
-            model.setValueAt(i + 1, i, 0); // Actualiza la columna # (índice 0)
-        }
-
-        // Mostrar un mensaje de confirmación
-        JOptionPane.showMessageDialog(this, "Eliminados correctamente.", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
-    } else {
-        // Si no hay filas seleccionadas, mostrar un mensaje de advertencia
-        JOptionPane.showMessageDialog(this, "Por favor, selecciona al menos un registro para eliminar.", "Advertencia", JOptionPane.WARNING_MESSAGE);
-    }
-
-
-    }//GEN-LAST:event_jButton12ActionPerformed
-
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    // Crear un array para almacenar los datos
-    String[] datos = new String[6];
-    
-    // Pedir al usuario que ingrese los datos
-    datos[0] = JOptionPane.showInputDialog(this, "Ingrese el Ingreso:");
-    datos[1] = JOptionPane.showInputDialog(this, "Ingrese la Egreso:");
-    datos[2] = JOptionPane.showInputDialog(this, "Ingrese la Descripcion:");
-    datos[3] = JOptionPane.showInputDialog(this, "Ingrese la Valor:");
-    datos[4] = JOptionPane.showInputDialog(this, "Ingrese el Fecha:");
-    datos[5] = JOptionPane.showInputDialog(this, "Ingrese el Total:");
-
-    // Validar que los campos no estén vacíos
-    for (String dato : datos) {
-        if (dato == null || dato.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-    }
-
-
-    // Generar un ID aleatorio de 5 cifras
-    int newId;
-    do {
-        newId = generateRandomId(5); // Cambia el número de cifras aquí si es necesario
-    } while (idExists(newId)); // Verifica que el ID no se repita
-
-    // Agregar los datos a la tabla
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    int rowCount = model.getRowCount(); // Obtener el número actual de filas
-    Object[] rowData = {rowCount + 1, newId, datos[0], datos[1], datos[2],datos[3], datos[4],datos[5]}; // Asignar el número de fila
-    model.addRow(rowData);
-
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         clientes gestionClientes = new clientes();
@@ -532,30 +355,28 @@ inventario Inventario = new inventario();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private int generateRandomId(int digits) {
