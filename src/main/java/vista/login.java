@@ -145,7 +145,7 @@ public class login extends javax.swing.JFrame {
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         String usuario = "admin";
         String contraseña = "1234";
-        
+        //login csmbios
         String pass = new String(this.pass.getPassword());
         
         if (txtusser.getText().equals(usuario)&& pass.equals(contraseña)) {
