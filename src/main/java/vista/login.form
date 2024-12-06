@@ -53,8 +53,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="pass" pref="140" max="32767" attributes="0"/>
-                              <Component id="txtusser" max="32767" attributes="0"/>
+                              <Component id="txt_contrasena" pref="140" max="32767" attributes="0"/>
+                              <Component id="txt_usuario" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -74,11 +74,11 @@
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="txtusser" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_usuario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="pass" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_contrasena" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="login" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="148" max="32767" attributes="0"/>
@@ -121,9 +121,9 @@
             <Property name="text" type="java.lang.String" value="CONTRASE&#xd1;A"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtusser">
+        <Component class="javax.swing.JTextField" name="txt_usuario">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtusserActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_usuarioActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="login">
@@ -135,7 +135,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="pass">
+        <Component class="javax.swing.JPasswordField" name="txt_contrasena">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>

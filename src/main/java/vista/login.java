@@ -4,8 +4,10 @@
  */
 package vista;
 
+import controlador.Contrl_login;
 import vista.escritorio;
 import javax.swing.JOptionPane;
+import modelo.Usuario;
 
 /**
  *
@@ -33,9 +35,9 @@ public class login extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtusser = new javax.swing.JTextField();
+        txt_usuario = new javax.swing.JTextField();
         login = new javax.swing.JButton();
-        pass = new javax.swing.JPasswordField();
+        txt_contrasena = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,9 +60,9 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setText("CONTRASEÑA");
 
-        txtusser.addActionListener(new java.awt.event.ActionListener() {
+        txt_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusserActionPerformed(evt);
+                txt_usuarioActionPerformed(evt);
             }
         });
 
@@ -98,8 +100,8 @@ public class login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pass, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                            .addComponent(txtusser)))
+                            .addComponent(txt_contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(txt_usuario)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -113,11 +115,11 @@ public class login extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtusser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(login)
                 .addContainerGap(148, Short.MAX_VALUE))
@@ -135,20 +137,20 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginActionPerformed
 
-    private void txtusserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusserActionPerformed
+    private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
         
         
         
         
-    }//GEN-LAST:event_txtusserActionPerformed
+    }//GEN-LAST:event_txt_usuarioActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         String usuario = "admin";
         String contraseña = "1234";
         //login csmbios
-        String pass = new String(this.pass.getPassword());
+        String pass = new String(this.txt_contrasena.getPassword());
         
-        if (txtusser.getText().equals(usuario)&& pass.equals(contraseña)) {
+        if (txt_usuario.getText().equals(usuario)&& pass.equals(contraseña)) {
             
             escritorio db = new escritorio();
             db.setVisible(true);
@@ -199,7 +201,31 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton login;
-    private javax.swing.JPasswordField pass;
-    private javax.swing.JTextField txtusser;
+    private javax.swing.JPasswordField txt_contrasena;
+    private javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables
+
+
+private void Login(){
+ if(!txt_usuario.getText().isEmpty()&& !txt_contrasena.getText().isEmpty()){
+     Contrl_login controlUsuario= new Contrl_login();
+     Usuario usuario = new Usuario();
+     usuario.setUsuario(txt_usuario.getText().trim());
+     usuario.setContraseña(txt_contrasena.getText().trim());
+     
+     if(controlUsuario.loginUser(usuario)){
+         JOptionPane.showMessageDialog(null, "bien");
+     }else{
+         JOptionPane.showMessageDialog(null, "el usuario o las credenciales estan incorrectas, intente de nuevo");
+     }
+     
+ }else{
+      JOptionPane.showMessageDialog(null, "porfavor rellene todos los campos");
+ }
+}
+
+}
+    
+    
+    
 }
