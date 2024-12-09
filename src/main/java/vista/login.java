@@ -5,9 +5,10 @@
 package vista;
 
 import controlador.Contrl_login;
-import vista.escritorio;
+import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
+
 
 /**
  *
@@ -20,6 +21,10 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        this.setTitle("CARPINTERIA JOSE ABEL");
+        this.setSize(new Dimension(700, 500));
     }
 
     /**
@@ -134,7 +139,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+    this.Login();
     }//GEN-LAST:event_loginActionPerformed
 
     private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
@@ -228,4 +233,4 @@ private void Login(){
     
     
     
-}
+
