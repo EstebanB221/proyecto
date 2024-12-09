@@ -150,17 +150,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_usuarioActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        String usuario = "admin";
-        String contraseña = "1234";
-        //login csmbios
-        String pass = new String(this.txt_contrasena.getPassword());
-        
-        if (txt_usuario.getText().equals(usuario)&& pass.equals(contraseña)) {
-            
-            escritorio db = new escritorio();
-            db.setVisible(true);
-            dispose();
-        }
+
        
     }//GEN-LAST:event_loginMouseClicked
 

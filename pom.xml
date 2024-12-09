@@ -14,6 +14,12 @@
             <version>RELEASE220</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>mysql-connector-java-5.1.16-bin</groupId>
+            <artifactId>mysql-connector-java-5.1.16-bin</artifactId>
+            <version>5.1.16</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
