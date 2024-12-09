@@ -37,6 +37,7 @@ public class facturacion extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_productos = new javax.swing.JTable();
+        jRadioButton1 = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -104,6 +105,9 @@ public class facturacion extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable_productos);
 
         jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 590, 260));
+
+        jRadioButton1.setText("jRadioButton1");
+        jPanel6.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, -1));
 
         getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 820, 230));
 
@@ -557,6 +561,7 @@ inventario Inventario = new inventario();
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JTable jTable_productos;
     private javax.swing.JTextField txt_cambio;
