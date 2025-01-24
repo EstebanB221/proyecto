@@ -15,9 +15,9 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>mysql-connector-java-5.1.16-bin</groupId>
-            <artifactId>mysql-connector-java-5.1.16-bin</artifactId>
-            <version>5.1.16</version>
+            <groupId>mysql-connector-j-9.2.0.tar</groupId>
+            <artifactId>mysql-connector-j-9.2.0.tar</artifactId>
+            <version>9.2.0</version>
             <type>jar</type>
         </dependency>
     </dependencies>
