@@ -11,23 +11,23 @@ import modelo.Conexion;
 
 public class Contrl_login {
     
-   public boolean loginUser(Usuario objeto){
+  public boolean loginUser(Usuario objeto){
         
         
-        boolean respuesta = false;
-        Connection cn= Conexion.getConnection();
-        String sql = "SELECT INTO usuario WHERE usuario= '" + objeto.getUsuario() + "' AND contrasena = '" +objeto.getContraseña()+ "'";
-        Statement st;
+      boolean respuesta = false;
+      Connection cn= Conexion.getConnection();
+       String sql = "SELECT * FROM usuario WHERE usuario= '" + objeto.getUsuario() + "' AND Contrasena = '" +objeto.getContrasena()+ "'";
+       Statement st;
         
-        try{
-            st = cn.createStatement();
+       try{
+           st = cn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
             while(rs.next()){
-                respuesta = true;
+               respuesta = true;
             }
             
-        }catch(SQLException e){
+       }catch(SQLException e){
             System.out.println("error al conectar la base de datos, no se encuentra");
             JOptionPane.showMessageDialog(null, "error a inciiar sesion");
         }

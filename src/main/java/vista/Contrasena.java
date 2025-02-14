@@ -42,6 +42,7 @@ public class Contrasena extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        rSButton1 = new rojeru_san.RSButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,10 +82,10 @@ public class Contrasena extends javax.swing.JFrame {
         });
         jPanel9.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 160, 50));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 38)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 41)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Restablece la contraseña");
-        jPanel9.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 450, 100));
+        jPanel9.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -30, 450, 100));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +101,7 @@ public class Contrasena extends javax.swing.JFrame {
                 jLabel5MousePressed(evt);
             }
         });
-        jPanel9.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 230, 30));
+        jPanel9.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 230, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +113,12 @@ public class Contrasena extends javax.swing.JFrame {
         jLabel7.setText("Escribe el correo electronico de tu cuenta para ");
         jPanel9.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 500, 30));
 
-        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 520, 480));
+        rSButton1.setText("Cancelar");
+        rSButton1.setColorHover(new java.awt.Color(204, 0, 0));
+        rSButton1.setColorText(new java.awt.Color(0, 0, 0));
+        jPanel9.add(rSButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, 160, 50));
+
+        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 520, 520));
 
         getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 610, 640));
 
@@ -187,6 +193,7 @@ public class Contrasena extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JButton login;
+    private rojeru_san.RSButton rSButton1;
     private javax.swing.JTextField txt_usuario1;
     // End of variables declaration//GEN-END:variables
 }

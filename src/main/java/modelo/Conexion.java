@@ -13,12 +13,12 @@ import java.sql.SQLException;
  */
 public class Conexion {
 
-    public static Connection getConnection() {
-        Connection con = null; 
+   public static Connection getConnection() {
+      Connection con = null; 
         try {
-            String myBD = "jdbc:mysql://localhost:3306/carpinteriasistema?serverTimezone=UTC";
-            con = DriverManager.getConnection(myBD, "root", ""); 
-            System.out.println("Conexión exitosa.");
+        String myBD = "jdbc:mysql://localhost:3306/carpinteriasistema?serverTimezone=UTC";
+         con = DriverManager.getConnection(myBD, "root", ""); 
+         System.out.println("Conexión exitosa.");
         } catch (SQLException e) {
             System.out.println("Error al conectar: " + e.getMessage());
         }

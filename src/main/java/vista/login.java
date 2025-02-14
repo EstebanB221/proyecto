@@ -5,7 +5,7 @@
 package vista;
 
 import controlador.Contrl_login;
-import java.awt.Color;
+//import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
@@ -38,6 +38,7 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel5 = new javax.swing.JPanel();
+        rSButtonMetroBeanInfo1 = new rojerusan.RSButtonMetroBeanInfo();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -50,9 +51,6 @@ public class login extends javax.swing.JFrame {
         login = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
 
         jPanel5.setBackground(new java.awt.Color(29, 30, 51));
 
@@ -153,67 +151,57 @@ public class login extends javax.swing.JFrame {
         });
         jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 400, 520));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 400, 540));
 
         jPanel8.setBackground(new java.awt.Color(29, 30, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 310, 520));
-
-        jLabel7.setText("X");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 20));
-
-        jLabel8.setText("-");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 0, 30, 20));
-
-        jLabel9.setText("0");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 0, 30, 20));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
+        ////
+        Contrasena contra= new Contrasena();
+        contra.setVisible(true); // Hacer visible la nueva ventana
+        // Cerrar la ventana actual
+        this.dispose();
+
+    }//GEN-LAST:event_jLabel2MousePressed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        this.Login();
+Login(); 
+Principal pc = new Principal();
+pc.setVisible(true); // Hacer visible la nueva ventana
+    // Cerrar la ventana actual
+        this.dispose();
     }//GEN-LAST:event_loginActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
 
     }//GEN-LAST:event_loginMouseClicked
 
-    private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
-
-    }//GEN-LAST:event_txt_usuarioActionPerformed
-
     private void passtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passtxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passtxtActionPerformed
 
-    private void txt_usuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_usuarioMousePressed
-      txt_usuario.setText("");
-        txt_usuario.setForeground(Color.black);
-      passtxt.setText("******");
-       passtxt.setForeground(Color.gray);
-    }//GEN-LAST:event_txt_usuarioMousePressed
-
     private void passtxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passtxtMousePressed
-     txt_usuario.setText("INGRESE SU USUARIO");
-     txt_usuario.setForeground(Color.black);
-      passtxt.setText("******");
-     passtxt.setForeground(Color.black);
+   
+        
     }//GEN-LAST:event_passtxtMousePressed
 
-    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
-       ////
-      Contrasena contra= new Contrasena();
-    contra.setVisible(true); // Hacer visible la nueva ventana
-    // Cerrar la ventana actual
-        this.dispose();
-       
-      
-    }//GEN-LAST:event_jLabel2MousePressed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
+
+    }//GEN-LAST:event_txt_usuarioActionPerformed
+
+    private void txt_usuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_usuarioMousePressed
+        
+        
+    }//GEN-LAST:event_txt_usuarioMousePressed
 
     /**
      * @param args the command line arguments
@@ -256,9 +244,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
@@ -266,26 +251,27 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton login;
     private javax.swing.JPasswordField passtxt;
+    private rojerusan.RSButtonMetroBeanInfo rSButtonMetroBeanInfo1;
     private javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables
 
 
 private void Login(){
  if(!txt_usuario.getText().isEmpty()&& !passtxt.getText().isEmpty()){
-     Contrl_login controlUsuario= new Contrl_login();
+    Contrl_login controlUsuario= new Contrl_login();
      Usuario usuario = new Usuario();
-     usuario.setUsuario(txt_usuario.getText().trim());
-     usuario.setContraseña(passtxt.getText().trim());
+    usuario.setUsuario(txt_usuario.getText().trim());
+     usuario.setContrasena(passtxt.getText().trim());
      
      if(controlUsuario.loginUser(usuario)){
          JOptionPane.showMessageDialog(null, "bien");
-     }else{
+    }else{
          JOptionPane.showMessageDialog(null, "el usuario o las credenciales estan incorrectas, intente de nuevo");
      }
      
  }else{
       JOptionPane.showMessageDialog(null, "porfavor rellene todos los campos");
- }
+}
 }
 
 }
